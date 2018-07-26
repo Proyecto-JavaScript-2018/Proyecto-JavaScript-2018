@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {MenuItem} from 'primeng/api';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
-
   ngOnInit() {
+    this.ocultarElementos();
   }
 
+  ocultarElementos() {
+
+    const mostrarCardWarning = <HTMLFormElement>document.getElementById('card_Alerta');
+    mostrarCardWarning.style.display = 'none';
+
+  }
 }

@@ -1,14 +1,18 @@
-import {Routes} from "@angular/router";
-import {HomeComponent} from "./home/home.component";
-import {AutorizacionService} from "./Servicios/autorizacion.service";
-import {LoginComponent} from "./login/login.component";
+import {Routes} from '@angular/router';
+import {HomeComponent} from './home/home.component';
+import {AutorizacionService} from './Servicios/autorizacion.service';
+import {LoginComponent} from './login/login.component';
 
 export const RUTAS: Routes = [
 
   {
     path: 'usuario/:id/home',
     component: HomeComponent,
-    canActivate: [AutorizacionService],
+    /*canActivate: [AutorizacionService],*/
+  },
+  {
+    path: 'home',
+    component: HomeComponent
   },
   {
     path: 'login',
