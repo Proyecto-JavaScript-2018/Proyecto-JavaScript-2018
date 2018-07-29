@@ -8,7 +8,7 @@ export class CredencialesService {
   estaLogeado = false;
   constructor() {
   }
-  login(password: string, passwordServer):Boolean {
+  login(password: string, passwordServer): Boolean {
     if (password === passwordServer) {
       this.estaLogeado = true;
       return true;
@@ -19,7 +19,8 @@ export class CredencialesService {
 
   }
 
-  cookies(){
+  cookies() {
     this.estaLogeado = true;
   }
+
 }

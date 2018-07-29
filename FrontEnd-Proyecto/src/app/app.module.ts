@@ -1,17 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
-import {Component, NgModule} from '@angular/core';
+import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
-import {HttpClientModule} from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
-import {RUTAS} from './rutas';
+import {RUTAS} from './app.rutas';
+import {HttpClientModule} from '@angular/common/http';
 import {RouterModule} from '@angular/router';
-import {MatIconModule, MatSidenavModule, MatToolbarModule} from '@angular/material';
-import {BrowserAnimationsModule, NoopAnimationsModule} from '@angular/platform-browser/animations';
-import {PanelMenuModule} from 'primeng/panelmenu';
-import {MenuItem} from 'primeng/api';
-import {ContextMenuModule} from 'primeng/primeng';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -21,19 +19,17 @@ import {ContextMenuModule} from 'primeng/primeng';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,
-    MatToolbarModule,
-    MatSidenavModule,
-    NoopAnimationsModule,
-    BrowserAnimationsModule,
-    PanelMenuModule,
-    ContextMenuModule,
-    MatIconModule,
     RouterModule.forRoot(
 
       RUTAS, {useHash: true}
 
     ),
+    HttpClientModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
