@@ -11,8 +11,10 @@ module.exports = {
 
     estado:{
       type:"string"
+    },
+    visto:{
+      type:"boolean"
     }
-
   },
 
 };
