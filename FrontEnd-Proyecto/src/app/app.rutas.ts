@@ -8,7 +8,7 @@ export const RUTAS: Routes = [
   {
     path: 'usuario/:id/home',
     component: HomeComponent,
-    canActivate: [AutorizacionService],
+    // canActivate: [AutorizacionService],
   },
   {
     path: 'login',
@@ -16,7 +16,7 @@ export const RUTAS: Routes = [
   },
   {
     path: '**',
-    redirectTo: 'login',
+    redirectTo: '',
     pathMatch: 'full',
   }
 ];

@@ -33,7 +33,14 @@
             <h1 class="card-title">Alerta</h1>
             <img id="imagen_Warning" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Warning_icon.svg/2000px-Warning_icon.svg.png" alt="alerta" style="height: 15rem; width: 15rem">
             <p class="card-text">Se Detecto Presencia de Gas</p>
-            <a href="#" class="btn btn-danger">Go somewhere</a>
+            <!--<a href="#" class="btn btn-danger">Go somewhere</a>-->
+
+            <div *ngFor="let info of gasDetectado; let i = index">
+              <a style="padding-right: 5rem">{{info.estado}}  {{cambiarEpoch(info.createdAt)}}</a>
+              <button type="button" class="btn btn-danger" (click)="cambiarVisto(info.id)">Check</button>
+            </div>
+
+
           </div>
           <div class="card-footer" style="color: black; background-color: red">
             Warning
