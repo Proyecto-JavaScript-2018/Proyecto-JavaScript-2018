@@ -7,6 +7,7 @@ export const RUTAS: Routes = [
 
   {
     path: 'usuario/:id/home',
+    //path: 'home',
     component: HomeComponent,
     // canActivate: [AutorizacionService],
   },
