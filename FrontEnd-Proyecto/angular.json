@@ -104,6 +104,11 @@
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
             "devServerTarget": "FrontEnd-Proyecto:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "FrontEnd-Proyecto:serve:production"
+            }
           }
         },
         "lint": {

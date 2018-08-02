@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
-import {Router} from "@angular/router";
-import {CredencialesService} from "../Servicios/credenciales.service";
 import * as Cookies from 'js-cookie';
+import {HttpClient} from '@angular/common/http';
+import {CredencialesService} from '../credenciales.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -56,6 +56,5 @@ export class LoginComponent implements OnInit {
 
 
   }
-
 
 }

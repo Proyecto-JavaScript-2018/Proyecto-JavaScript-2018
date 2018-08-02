@@ -1,0 +1,109 @@
+<div class="row">
+
+
+  <div class="col-sm-12"><br></div>
+
+  <div class="col-sm-2"></div>
+  <div class="col-sm-8">
+    <div class="card">
+      <div class="card-header">DATOS DE LA CUENTA</div>
+      <div class="card-body">
+        <div class="row">
+
+          <div class="col-sm-9">
+            <h5 class="card-title">Username: {{usuario[0].username}}</h5>
+            <p class="card-text">Password: {{usuario[0].password}}</p>
+
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-2"></div>
+  <div class="col-sm-12"><br></div>
+  <div class="col-sm-2"></div>
+
+  <div class="col-sm-8">
+    <div class="card">
+      <div class="card-header">DATOS DEL USUARIO</div>
+      <div class="card-body">
+        <h5 class="card-title">Username: {{usernamefac}}</h5>
+        <p class="card-text">Password: {{passwordfac}}</p>
+
+
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-2"></div>
+  <div class="col-sm-12"><br></div>
+  <div class="col-sm-3"></div>
+  <div class="col-sm-6" align="center">
+    <div class="row">
+      <div class="col-sm-6">
+
+      </div>
+      <div class="col-sm-6">
+        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#editarModal"> Editar Datos del Usuaario
+        </button>
+
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3"></div>
+
+  <div class="col-sm-12"><br></div>
+
+  <div class="col-sm-1"></div>
+
+
+  <div class="col-sm-1"></div>
+
+
+</div>
+
+
+<div class="modal fade" id="editarModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">EDITAR DATOS DEL USUARIO</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <form #datosForm="ngForm" (ngSubmit)="guardarInformacion($event, datosForm)">
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="inputNombre">Username</label>
+            <input #inputNombre="ngModel" type="text" class="form-control" id="inputNombre" [value]="usernamefac" [ngModel]="usernamefac"
+                   name="username" required>
+
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="inputPassword">Password</label>
+              <input #inputPassword="ngModel" type="text" class="form-control" id="inputPassword" [value]="passwordfac" [ngModel]="passwordfac"
+                     name="password" required>
+
+            </div>
+
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" *ngIf="datosForm.valid" (click)='guardarInformacion($event, datosForm)'
+                  class="btn btn-primary" data-dismiss="modal">Guardar
+          </button>
+
+        </div>
+        </div>
+      </form>
+
+  </div>
+</div>
+</div>
