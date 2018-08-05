@@ -19,8 +19,16 @@ export class CredencialesService {
 
   }
 
-  cookies() {
-    this.estaLogeado = true;
+  cookies(estado): Boolean {
+
+    if (estado) {
+      this.estaLogeado = true;
+      return true;
+    } else {
+      this.estaLogeado = false;
+      return false;
+    }
+
   }
 
 }

@@ -1,8 +1,6 @@
 
 <div class="row">
 
-
-
   <div class="col-sm-12">
 
     <nav class="navbar navbar-dark bg-dark">
@@ -12,11 +10,6 @@
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
       </form>
     </nav>
-
-    <ul>
-      <li><a [routerLink]="['/tabla']">Datos en tiempo real</a></li>
-    </ul>
-
 
   </div>
 
@@ -32,7 +25,7 @@
 
       <div class="col-sm-12" style="text-align: center; padding-top: 2rem">
 
-        <div id="card_Alerta" class="card text-center">
+        <div id="card_Alerta" class="card text-center" >
           <div class="card-header" style="color: black; background-color: red">
             Warning
           </div>
@@ -40,14 +33,24 @@
             <h1 class="card-title">Alerta</h1>
             <img id="imagen_Warning" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Warning_icon.svg/2000px-Warning_icon.svg.png" alt="alerta" style="height: 15rem; width: 15rem">
             <p class="card-text">Se Detecto Presencia de Gas</p>
-            <a href="#" class="btn btn-danger">Go somewhere</a>
+            <!--<a href="#" class="btn btn-danger">Go somewhere</a>-->
+
+            <div *ngFor="let info of gasDetectado; let i = index">
+               <div *ngIf="info.visto == false">
+              <a style="padding-right: 5rem">{{info.estado}}  {{cambiarEpoch(info.createdAt)}}</a>
+              <button type="button" class="btn btn-danger" (click)="cambiarVisto(info,i)">Check</button>
+            </div> 
+            </div>
+
+
           </div>
           <div class="card-footer" style="color: black; background-color: red">
             Warning
           </div>
         </div>
 
-        <div id="card_Cool" class="card text-center">
+        <div >
+        <div id="card_Cool" class="card text-center" >
           <div class="card-header" style="color: black; background-color: lawngreen">
           </div>
           <div class="card-body">
@@ -57,6 +60,7 @@
           <div class="card-footer" style="color: black; background-color: lawngreen">
           </div>
         </div>
+      </div>
 
       </div>
 
