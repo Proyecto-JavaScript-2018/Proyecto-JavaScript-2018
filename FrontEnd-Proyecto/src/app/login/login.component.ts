@@ -47,6 +47,7 @@ export class LoginComponent implements OnInit {
           this._router.navigate(rutaHomeUsuario);
           // const Cookies2 = Cookies.noConflict();
           Cookies.set('cookieWeb', {username: this.username, id: this.usuarioId, estado: 'true'});
+          // this._actorService.guardarUsuario(this.usuarioId);
         } else {
           console.log('error');
         }
