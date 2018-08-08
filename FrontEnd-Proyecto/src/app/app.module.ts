@@ -9,13 +9,21 @@ import {HttpClientModule} from '@angular/common/http';
 import {RouterModule} from '@angular/router';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { UsuarioComponent } from './usuario/usuario.component';
+import { TablaDatosComponent } from './tabla-datos/tabla-datos.component';
+import {AccordionModule} from 'primeng/accordion';     //accordion and accordion tab
+import {MenuItem} from 'primeng/api';   
+import {TableModule} from 'primeng/table';
+//import {AngularFontAwesomeModule} from 'angular-font-awesome';  
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    UsuarioComponent,
+    TablaDatosComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +37,12 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AccordionModule,
+    TableModule
+    //AngularFontAwesomeModule
+
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

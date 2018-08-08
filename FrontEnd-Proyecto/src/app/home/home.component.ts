@@ -30,7 +30,7 @@ export class HomeComponent implements OnInit {
     this.ocultarElementos();
     // this.consultarBase();
 
-    this.httpClient.get(`http://localhost:1338/Gas?visto=false`).subscribe((data: any[]) => {
+    this.httpClient.get(`http://10.42.0.1:1338/Gas?visto=false`).subscribe((data: any[]) => {
         this.gasDetectado = data;
 
         if (this.gasDetectado.length === 0) {
@@ -69,7 +69,7 @@ export class HomeComponent implements OnInit {
 
   consultarBase() {
 
-    this.httpClient.get(`http://localhost:1338/Gas?visto=false`).subscribe((data: any[]) => {
+    this.httpClient.get(`http://10.42.0.1:1338/Gas?visto=false`).subscribe((data: any[]) => {
         this.gasDetectado = data;
       }
     );

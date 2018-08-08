@@ -36,7 +36,7 @@ export class LoginComponent implements OnInit {
 
 
   getProfile() {
-    this.httpClient.get(`http://localhost:1337/Usuario?username=${this.username}`).subscribe((data: any[]) => {
+    this.httpClient.get(`http://10.42.0.1:1338/Usuario?username=${this.username}`).subscribe((data: any[]) => {
         this.usuario = data;
         this.passwordServer = this.usuario[0]['password'];
         this.usuarioId = this.usuario[0]['id'];
